@@ -2,11 +2,9 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Heading from "@/components/Heading";
 import MovingBorderButton from "@/components/MovingBorderDemo";
+import PricingCard from "@/components/PricingCard";
 import Process from "@/components/Process";
-import Produits from "@/components/Produits";
 import TestimonialCard from "@/components/TestimonialCard";
-import ThreeDCardDemo from "@/components/ThreeDCardDemo";
-import { clients } from "@/constants/clients";
 import { testimonials } from "@/constants/testimonials";
 import { ArrowRightCircle, MoveRight } from "lucide-react";
 import Image from "next/image";
@@ -85,11 +83,54 @@ export default function Home() {
             <ThreeDCardDemo imageUrl="/alum2.png" />
           </div> */}
         </section>
+        {/** Notre expertise Section */}
+        <section className="relative w-full h-screen">
+          <div className="absolute -z-50 grid grid-flow-col w-full grid-cols-2">
+            <div className="absolute right-52">
+              <div className="flex items-center gap-2">
+                <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+                <h4 className="text-lg font-medium">20 ans d'expérience</h4>
+              </div>
+              <Heading title={"Notre expertise"} />
+            </div>
+            <Image src="/alum2.png" width={707} height={963} alt={"img"} />
+          </div>
+          <div className="absolute -z-10 right-10 top-44 w-[50%] grid grid-flow-row grid-rows-3 gap-0 p-8 bg-slate-700">
+            <PricingCard
+              title="Aluminium Menuiserie"
+              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+              number="01"
+              color="red-600"
+              monthlyPrice={0}
+              annuallyPrice={0}
+              features={[]}
+            />
+            <PricingCard
+              title="Aluminium Menuiserie"
+              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+              number="01"
+              color="amber-500"
+              monthlyPrice={0}
+              annuallyPrice={0}
+              features={[]}
+            />
+            <PricingCard
+              title="Aluminium Menuiserie"
+              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+              number="01"
+              color="sky-500"
+              monthlyPrice={0}
+              annuallyPrice={0}
+              features={[]}
+            />
+          </div>
+        </section>
+        {/** End Notre expertise Section */}
 
         {/* Features section */}
         <section
           id="features"
-          className="flex flex-col gap-y-12 md:gap-y-20 lg:gap-y-28"
+          className="flex flex-col items-center justify-center h-screen gap-y-12 md:gap-y-20 lg:gap-y-28"
         >
           {/* Part 1 */}
           <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">

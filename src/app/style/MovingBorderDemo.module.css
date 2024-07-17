@@ -23,7 +23,7 @@
     left: 0;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, transparent, rgb(137, 180, 221), transparent);
+    background: linear-gradient(45deg, transparent, rgb(117, 216, 186), transparent);
     transition: all 0.5s;
     z-index: -1;
   }

@@ -15,21 +15,21 @@ import Link from "next/link";
 export default function Home() {
   const images = ["/alum2.png", "/bg2.png", "/alum3.png"];
   return (
-    <div className="overflow-x-hidden pt-24 lg:pt-28 antialiased">
+    <div className="overflow-x-hidden antialiased">
       {/* Home section */}
-      <section id="home" className="relative">
+      <section id="home" className="relative top-0 lg:top-20">
         <Image
           src="/alum2.png"
-          width={1900}
-          height={1000}
+          width={500}
+          height={500}
           alt="test"
-          className="absolute -z-50 w-full min-h-screen md:max-h-[670px] md:h-full lg:min-h-screen -top-20 left-0 opacity-50"
+          className="absolute -z-50 w-full min-h-screen -top-20 left-0 opacity-50"
         />
         <figure className="bubble w-96 lg:w-[520px] h-96 bg-indigo-600 top-16 -left-40" />
         <figure className="bubble w-96 lg:w-[430px] h-96 bg-sky-600 bottom-16 md:bottom-44  -right-20 md:right-20" />
-        <div className="flex flex-col text-center space-y-12">
+        <div className="container flex flex-col text-center space-y-12">
           <div className="flex flex-col items-center space-y-6">
-            <p className="capitalize border border-slate-700 py-1 px-3 text-xs rounded-3xl cursor-pointer hover:border-sky-500 hover:bg-slate-800 shadow-md transition-all">
+            <p className="capitalize border border-slate-700 py-1 px-3 text-xs rounded-3xl cursor-pointer hover:border-sky-500 hover:bg-teal-400 hover:text-black shadow-md transition-all">
               Aluminium Professionnel
               <ArrowRightCircle className="inline ml-1 w-4 h-4" />
             </p>
@@ -51,51 +51,33 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          {/* <Image
+          <Image
             src="/Hero-image.svg"
             width={670}
             height={370}
             alt="banner"
             className="mx-auto shadow-xl"
-          /> */}
+          />
         </div>
       </section>
       {/* Home section */}
       <div className="relative container">
         {/* Clients section */}
-        {/* <section
-          id="clients"
-          className="max-w-[62rem] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-12 gap-y-4"
-        >
-          {clients.map((client, index) => (
-            <Image
-              key={index}
-              src={client.imageUrl}
-              width={120}
-              height={80}
-              alt={client.alt}
-              className="w-40 md:w-full mx-auto"
-            />
-          ))}
-        </section> */}
-        {/* slide image section */}
-        <section className="flex flex-col items-center gap-y-12 md:gap-y-20 lg:gap-y-28">
-          {/* <Heading title="Nos Produits" isCentered />
-          <div className="w-full">
-            <Produits images={images} />
-          </div> */}
-        </section>
-        {/* Clients section */}
-        <section className="gap-y-12 md:gap-y-20 lg:gap-y-28">
-          <Heading title="Vos Services" isCentered />
-          <div className="min-h-screen flex flex-col items-center justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Card frontContent="Front 1" backContent="Back 1" />
-              <Card frontContent="Front 2" backContent="Back 2" />
-              <Card frontContent="Front 3" backContent="Back 3" />
-              <Card frontContent="Front 4" backContent="Back 4" />
+        <section className="flex flex-col min-h-screen gap-y-12 lg:gap-y-16">
+          <div className="flex flex-col justify-start items-start gap-4">
+            <div className="flex items-center gap-2">
+              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+              <h4 className="text-lg font-medium">Nos Produits & Services</h4>
             </div>
+            <Heading title="Découvrez nos produits en un clic !" />
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card frontContent="Front 1" backContent="Back 1" />
+            <Card frontContent="Front 2" backContent="Back 2" />
+            <Card frontContent="Front 3" backContent="Back 3" />
+            <Card frontContent="Front 4" backContent="Back 4" />
+          </div>
+
           {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             <ThreeDCardDemo imageUrl="/alum.png" />
             <ThreeDCardDemo imageUrl="/bg2.png" />

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 interface CardProps {
   frontContent: string;
@@ -7,16 +7,12 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ frontContent, backContent }) => {
   return (
-    <div className="flip-card">
-    <div className="flip-card-inner">
-      <div className="flip-card-front">
-        {frontContent}
-      </div>
-      <div className="flip-card-back">
-        {backContent}
+    <div className="flip-card w-[384px] h-[450px] lg:w-[300px] lg:h-[350px]">
+      <div className="flip-card-inner ">
+        <div className="flip-card-front rounded-lg">{frontContent}</div>
+        <div className="flip-card-back rounded-lg">{backContent}</div>
       </div>
     </div>
-  </div>
   );
 };
 

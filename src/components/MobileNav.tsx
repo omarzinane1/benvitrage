@@ -15,14 +15,16 @@ const MobileNav = () => {
   return (
     <>
       <div
-        className="flex md:hidden cursor-pointer md:cursor-none"
+        className="flex items-center md:hidden cursor-pointer md:cursor-none"
         onClick={toggleMenu}
       >
         {!isOpen ? <Menu /> : <X />}
       </div>
       <figure
-        className={`absolute rounded-md right-2 origin-top top-20 w-screen ${
-          isOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-5 opacity-0 invisible"
+        className={`absolute rounded-md right-0 origin-top top-24 w-screen ${
+          isOpen
+            ? "translate-y-0 opacity-100 visible"
+            : "-translate-y-5 opacity-0 invisible"
         } w-auto bg-slate-800 p-6 transition-all duration-300 ease-in-out z-50`}
       >
         <nav className="w-full h-full flex flex-col transition-shadow duration-300 space-y-2 capitalize font-normal tracking-wide">

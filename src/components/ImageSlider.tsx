@@ -1,5 +1,3 @@
-// components/ImageSlider.tsx
-
 import { useState, useEffect } from 'react';
 
 interface ImageSliderProps {
@@ -26,7 +24,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, currentIndex, onChang
   };
 
   return (
-    <div className="relative w-[50%] h-96">
+    <div className="relative lg:w-[65%] w-[100%] lg:h-[80vh] h-96">
       <img src={images[currentImage]} className="object-cover w-full h-full" alt={`Slide ${currentImage}`} />
       <button className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded" onClick={prevSlide}>
         Prev

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Logo from "@/components/Logo";
 import { Facebook, Github, Instagram, Twitter, Youtube } from "lucide-react";
 import { footerColumns } from "@/constants/footer-links";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ const Footer = () => {
     <Youtube key="y" className="social-link" />,
   ];
   return (
-    <footer className="pt-20 pb-4">
+    <footer className="flex flex-col gap-4 pt-20 pb-4">
       {/* Links */}
       <div className="container mb-12 flex flex-col lg:flex-row">
         <div className="basis-1/3 flex flex-col md:items-center lg:items-start gap-4 lg:gap-6">
@@ -55,10 +56,28 @@ const Footer = () => {
         </div>
       </div>
       {/* Links */}
+      {/** contact */}
+      <div className="flex justify-center items-center">
+        <div className="grid grid-flow-col grid-cols-3 justify-between gap-10 p-10 bg-slate-800">
+          <div className="icon-contact">
+            <Mail size={30} color="white" />
+            <span className="Footer-contact">contact@BenVitrage.ma</span>
+          </div>
+          <div className="icon-contact">
+            <Phone size={30} color="white" />
+            <span className="Footer-contact">+212 (05) 45 67 89 03</span>
+          </div>
+          <div className="icon-contact">
+            <MapPin size={30} color="white" />
+            <span className="Footer-contact">63, Av Ahmed El Mansour Eddahbi</span>
+          </div>
+        </div>
+      </div>
+      {/** contact */}
       {/* Copyrights */}
-      <div className="container border-t border-slate-700">
+      <div className="flex justify-center items-center container border-t border-slate-700">
         <p className="capitalize pt-4 text-center lg:text-start">
-          {`© ${currentYear} Aluminium.`}
+          {`© Ben Vitrage ${currentYear}. Tous droits réservés. Création : REVONTIC TECHNOLOGIES.`}
         </p>
       </div>
       {/* Copyrights */}

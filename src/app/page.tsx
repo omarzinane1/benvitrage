@@ -46,7 +46,7 @@ export default function Home() {
               </Link>
               <Link href="#pricing">
                 <Button variant="outline">
-                  view pricing <MoveRight className="w-4 h-4" />
+                  Nos Produits <MoveRight className="w-4 h-4" />
                 </Button>
               </Link>
             </div>
@@ -144,7 +144,14 @@ export default function Home() {
         </section>
 
         {/** End Nos Services */}
-        <section>
+        <section className="flex flex-col gap-y-12 lg:gap-y-16">
+          <div className="flex flex-col justify-start items-start gap-4">
+            <div className="flex items-center gap-2">
+              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+              <h4 className="text-lg font-medium">Nos Galerie</h4>
+            </div>
+            <Heading title="Découvrez nos projets !" />
+          </div>
           <div className="flex-1">
             <RightSection />
           </div>

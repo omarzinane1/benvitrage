@@ -2,8 +2,10 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Heading from "@/components/Heading";
 import MovingBorderButton from "@/components/MovingBorderDemo";
+import { StickyScrollRevealDemo } from "@/components/NosServices";
 import PricingCard from "@/components/PricingCard";
 import Process from "@/components/Process";
+import RightSection from "@/components/RightSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import { testimonials } from "@/constants/testimonials";
 import { ArrowRightCircle, MoveRight } from "lucide-react";
@@ -48,14 +50,14 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+            <Image
+              src="/Hero-image.svg"
+              width={500}
+              height={370}
+              alt="banner"
+              className="mx-auto shadow-xl"
+            />
           </div>
-          <Image
-            src="/Hero-image.svg"
-            width={670}
-            height={370}
-            alt="banner"
-            className="mx-auto shadow-xl"
-          />
         </div>
       </section>
       {/* Home section */}
@@ -69,7 +71,7 @@ export default function Home() {
             </div>
             <Heading title="Découvrez nos produits en un clic !" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
             <Card frontContent="Front 1" backContent="Back 1" />
             <Card frontContent="Front 2" backContent="Back 2" />
             <Card frontContent="Front 3" backContent="Back 3" />
@@ -84,53 +86,73 @@ export default function Home() {
           </div> */}
         </section>
         {/** Notre expertise Section */}
-        <section className="relative w-full h-screen">
-          <div className="absolute -z-50 grid grid-flow-col w-full grid-cols-2">
-            <div className="absolute right-52">
-              <div className="flex items-center gap-2">
-                <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
-                <h4 className="text-lg font-medium">20 ans d'expérience</h4>
+        <section className="w-full gap-y-12 lg:gap-y-16">
+          <div className="relative md:h-screen">
+            <div className="lg:absolute lg:-z-50 grid grid-cols-1 w-full lg:grid-cols-2 gap-10">
+              <div className="lg:absolute lg:right-56">
+                <div className="flex items-center gap-2">
+                  <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+                  <h4 className="text-lg font-medium">20 ans d&expérience</h4>
+                </div>
+                <Heading title={"Notre expertise"} />
               </div>
-              <Heading title={"Notre expertise"} />
+              <Image src="/alum2.png" width={707} height={963} alt={"img"} />
             </div>
-            <Image src="/alum2.png" width={707} height={963} alt={"img"} />
-          </div>
-          <div className="absolute -z-10 right-10 top-44 w-[50%] grid grid-flow-row grid-rows-3 gap-0 p-8 bg-slate-700">
-            <PricingCard
-              title="Aluminium Menuiserie"
-              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
-              number="01"
-              color="red-600"
-              monthlyPrice={0}
-              annuallyPrice={0}
-              features={[]}
-            />
-            <PricingCard
-              title="Aluminium Menuiserie"
-              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
-              number="01"
-              color="amber-500"
-              monthlyPrice={0}
-              annuallyPrice={0}
-              features={[]}
-            />
-            <PricingCard
-              title="Aluminium Menuiserie"
-              description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
-              number="01"
-              color="sky-500"
-              monthlyPrice={0}
-              annuallyPrice={0}
-              features={[]}
-            />
+            <div className="lg:absolute lg:-z-10 lg:right-10 lg:top-24 lg:w-[50%] grid grid-flow-row grid-rows-3 gap-0 p-8 bg-slate-700">
+              <PricingCard
+                title="Aluminium Menuiserie"
+                description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+                number="01"
+                color="red-600"
+                monthlyPrice={0}
+                annuallyPrice={0}
+                features={[]}
+              />
+              <PricingCard
+                title="Aluminium Menuiserie"
+                description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+                number="01"
+                color="amber-500"
+                monthlyPrice={0}
+                annuallyPrice={0}
+                features={[]}
+              />
+              <PricingCard
+                title="Aluminium Menuiserie"
+                description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
+                number="01"
+                color="sky-500"
+                monthlyPrice={0}
+                annuallyPrice={0}
+                features={[]}
+              />
+            </div>
           </div>
         </section>
         {/** End Notre expertise Section */}
 
+        {/** Nos Services */}
+        <section className="flex flex-col gap-y-12 lg:gap-y-16">
+          <div className="flex flex-col justify-start items-start gap-4">
+            <div className="flex items-center gap-2">
+              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+              <h4 className="text-lg font-medium">Nos Services</h4>
+            </div>
+            <Heading title="répondent à vos besoins." />
+          </div>
+          <StickyScrollRevealDemo />
+        </section>
+
+        {/** End Nos Services */}
+        <section>
+          <div className="flex-1">
+            <RightSection />
+          </div>
+        </section>
         {/* Features section */}
         <section
           id="features"
-          className="flex flex-col items-center justify-center h-screen gap-y-12 md:gap-y-20 lg:gap-y-28"
+          className="flex flex-col items-center gap-y-12 md:gap-y-20 lg:gap-y-28"
         >
           {/* Part 1 */}
           <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -142,7 +164,7 @@ export default function Home() {
               className="absolute -z-50 w-[1400px] h-[670px] top-0 left-0 opacity-5"
             />
             <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-start">
-              <Heading title="Apsum dolor sit amet consectetur." />
+              <Heading title="Rester en Contact." />
               <p className="lg:max-w-[34rem] leading-normal sm:text-lg sm:leading-8">
                 Apsum dolor sit amet consectetur. Aliquam elementum elementum in
                 ultrices. Dui maecenas ut eros turpis ultrices metus morbi

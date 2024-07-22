@@ -7,7 +7,7 @@ interface CardProps {
 
 const Card: FC<CardProps> = ({ frontContent, backContent }) => {
   return (
-    <div className="flip-card w-[384px] h-[450px] lg:w-[300px] lg:h-[350px]">
+    <div className="flip-card w-full h-96">
       <div className="flip-card-inner ">
         <div className="flip-card-front rounded-lg">{frontContent}</div>
         <div className="flip-card-back rounded-lg">{backContent}</div>

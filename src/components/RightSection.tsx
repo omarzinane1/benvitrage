@@ -7,8 +7,8 @@ const RightSection: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const thumbnails = [
-    "/alum.png",
     "/alum2.png",
+    "/alum.png",
     "/alum3.png",
     "/bg.png",
     "/alum.png",

@@ -60,7 +60,7 @@ const NosServices = [
 ];
 export function StickyScrollRevealDemo() {
   return (
-    <div className="p-5 w-full bg-slate-800">
+    <div className="bg-slate-800">
       <StickyScroll content={NosServices} />
     </div>
   );

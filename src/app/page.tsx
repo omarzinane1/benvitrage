@@ -16,80 +16,71 @@ export default function Home() {
   const images = ["/alum2.png", "/bg2.png", "/alum3.png"];
   return (
     <div className="overflow-x-hidden antialiased">
-      {/* Home section */}
-      <section id="home" className="relative top-0 lg:top-20">
-        <Image
-          src="/alum2.png"
-          width={500}
-          height={500}
-          alt="test"
-          className="absolute -z-50 w-full min-h-screen -top-20 left-0 opacity-50"
-        />
-        <figure className="bubble w-96 lg:w-[520px] h-96 bg-indigo-600 top-16 -left-40" />
-        <figure className="bubble w-96 lg:w-[430px] h-96 bg-sky-600 bottom-16 md:bottom-44  -right-20 md:right-20" />
-        <div className="container flex flex-col text-center space-y-12">
-          <div className="flex flex-col items-center space-y-6">
-            <p className="capitalize border border-slate-700 py-1 px-3 text-xs rounded-3xl cursor-pointer hover:border-sky-500 hover:bg-teal-400 hover:text-black shadow-md transition-all">
-              Aluminium Professionnel
-              <ArrowRightCircle className="inline ml-1 w-4 h-4" />
-            </p>
-            <Heading title="Plus de 20 ans d'expérience" />
-            <p className="max-w-[46rem] leading-normal sm:text-lg sm:leading-8">
-              Nous offrons des gammes de produits diversifiées et sur mesure
-              selon les besoins et exigences de nos clients. Notre engagement,
-              professionnalisme et persévérance sont des facteurs fondamentaux
-              dans le travail quotidien de notre équipe.
-            </p>
-            <div className="flex items-center gap-4">
-              <Link href="/devis" passHref>
-                <MovingBorderButton text={"Demande de devis"} />
-              </Link>
-              <Link href="#pricing">
-                <Button variant="outline">
-                  Nos Produits <MoveRight className="w-4 h-4" />
-                </Button>
-              </Link>
+      <div className="relative">
+        {/* Home section */}
+        <section
+          id="home"
+          className="relative flex justify-center items-center h-[100vh]"
+        >
+          {/* <Image
+            src="/alum2.png"
+            width={500}
+            height={500}
+            alt="test"
+            className="absolute -z-50 w-full h-[625px] left-0 opacity-50"
+          /> */}
+          {/* <figure className="bubble w-96 lg:w-[520px] h-96 bg-indigo-600 top-16 -left-40" />
+          <figure className="bubble w-96 lg:w-[430px] h-96 bg-sky-600 bottom-16 md:bottom-44  -right-20 md:right-20" /> */}
+          <div className="container flex flex-col text-center space-y-12">
+            <div className="flex flex-col items-center space-y-6">
+              <p className="capitalize border border-slate-700 py-1 px-3 text-xs rounded-3xl cursor-pointer hover:border-sky-500 hover:bg-teal-400 hover:text-black shadow-md transition-all">
+                Aluminium Professionnel
+                <ArrowRightCircle className="inline ml-1 w-4 h-4" />
+              </p>
+              <Heading title="Plus de 20 ans d'expérience" />
+              <p className="max-w-[46rem] leading-normal sm:text-lg sm:leading-8">
+                Nous offrons des gammes de produits diversifiées et sur mesure
+                selon les besoins et exigences de nos clients. Notre engagement,
+                professionnalisme et persévérance sont des facteurs fondamentaux
+                dans le travail quotidien de notre équipe.
+              </p>
+              <div className="flex items-center gap-4">
+                <Link href="/contact" passHref>
+                  <MovingBorderButton text={"Demande de devis"} />
+                </Link>
+                <Link href="#pricing">
+                  <Button variant="outline">
+                    Nos Produits <MoveRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+              </div>
             </div>
-            <Image
-              src="/Hero-image.svg"
-              width={500}
-              height={370}
-              alt="banner"
-              className="mx-auto shadow-xl"
-            />
           </div>
-        </div>
-      </section>
-      {/* Home section */}
-      <div className="relative container">
+        </section>
+        {/* Home section */}
         {/* Clients section */}
-        <section className="flex flex-col min-h-screen gap-y-12 lg:gap-y-16">
-          <div className="flex flex-col justify-start items-start gap-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
-              <h4 className="text-lg font-medium">Nos Produits & Services</h4>
+        <section className="flex justify-center items-center min-h-screen container py-12">
+          <div className="flex flex-col gap-10 w-full">
+            <div className="flex flex-col justify-start items-start">
+              <div className="flex items-center gap-2">
+                <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+                <h4 className="text-lg font-medium">Nos Produits & Services</h4>
+              </div>
+              <Heading title="Découvrez nos produits en un clic !" />
             </div>
-            <Heading title="Découvrez nos produits en un clic !" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+              <Card frontContent="Front 1" backContent="Back 1" />
+              <Card frontContent="Front 2" backContent="Back 2" />
+              <Card frontContent="Front 3" backContent="Back 3" />
+              <Card frontContent="Front 4" backContent="Back 4" />
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            <Card frontContent="Front 1" backContent="Back 1" />
-            <Card frontContent="Front 2" backContent="Back 2" />
-            <Card frontContent="Front 3" backContent="Back 3" />
-            <Card frontContent="Front 4" backContent="Back 4" />
-          </div>
-
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            <ThreeDCardDemo imageUrl="/alum.png" />
-            <ThreeDCardDemo imageUrl="/bg2.png" />
-            <ThreeDCardDemo imageUrl="/alum2.png" />
-            <ThreeDCardDemo imageUrl="/alum2.png" />
-          </div> */}
         </section>
         {/** Notre expertise Section */}
-        <section className="w-full gap-y-12 lg:gap-y-16">
-          <div className="relative md:h-screen">
-            <div className="lg:absolute lg:-z-50 grid grid-cols-1 w-full lg:grid-cols-2 gap-10">
-              <div className="lg:absolute lg:right-56">
+        <section className="w-full h-screen gap-y-12 xl:gap-y-16 container lg:top-10 py-12 ">
+          <div className="relative h-96">
+            <div className="xl:absolute xl:-z-50 grid grid-cols-1 w-full xl:grid-cols-2 gap-10">
+              <div className="xl:absolute xl:right-56">
                 <div className="flex items-center gap-2">
                   <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
                   <h4 className="text-lg font-medium">20 ans d&expérience</h4>
@@ -98,7 +89,7 @@ export default function Home() {
               </div>
               <Image src="/alum2.png" width={707} height={963} alt={"img"} />
             </div>
-            <div className="lg:absolute lg:-z-10 lg:right-10 lg:top-24 lg:w-[50%] grid grid-flow-row grid-rows-3 gap-0 p-8 bg-slate-700">
+            <div className="xl:absolute xl:-z-10 xl:right-0 xl:top-24 xl:w-[60%] grid grid-flow-row grid-rows-3 gap-0 p-4 lg:p-8 bg-slate-700">
               <PricingCard
                 title="Aluminium Menuiserie"
                 description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
@@ -132,34 +123,38 @@ export default function Home() {
         {/** End Notre expertise Section */}
 
         {/** Nos Services */}
-        <section className="flex flex-col gap-y-12 lg:gap-y-16">
-          <div className="flex flex-col justify-start items-start gap-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
-              <h4 className="text-lg font-medium">Nos Services</h4>
+        <section className="flex justify-center items-center h-screen container py-12 ">
+          <div className="flex flex-col gap-10 w-full">
+            <div className="flex flex-col justify-start items-start ">
+              <div className="flex items-center gap-2">
+                <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+                <h4 className="text-lg font-medium">Nos Services</h4>
+              </div>
+              <Heading title="répondent à vos besoins." />
             </div>
-            <Heading title="répondent à vos besoins." />
+            <StickyScrollRevealDemo />
           </div>
-          <StickyScrollRevealDemo />
         </section>
-
         {/** End Nos Services */}
-        <section className="flex flex-col gap-y-12 lg:gap-y-16">
-          <div className="flex flex-col justify-start items-start gap-4">
-            <div className="flex items-center gap-2">
-              <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
-              <h4 className="text-lg font-medium">Nos Galerie</h4>
+
+        <section className="flex justify-center items-center container min-h-screen top-20 py-12">
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2">
+                <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
+                <h4 className="text-lg font-medium">Nos Galerie</h4>
+              </div>
+              <Heading title="Découvrez nos projets !" />
             </div>
-            <Heading title="Découvrez nos projets !" />
-          </div>
-          <div className="flex-1">
-            <RightSection />
+            <div className="flex-1">
+              <RightSection />
+            </div>
           </div>
         </section>
         {/* Features section */}
         <section
           id="features"
-          className="flex flex-col items-center gap-y-12 md:gap-y-20 lg:gap-y-28"
+          className="flex flex-col justify-center items-center container min-h-screen"
         >
           {/* Part 1 */}
           <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -200,32 +195,46 @@ export default function Home() {
         {/* Features section */}
 
         {/* Testimonials section */}
-        <section id="testimonials" className="flex flex-col gap-8">
-          <Heading title="Témoignages" isCentered />
-          <h4 className="text-center">
-            « Nous considérons nos clients comme des invités, à une fête où nous
-            sommes les hôtes »
-          </h4>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
-            ))}
+        <section
+          id="testimonials"
+          className="flex justify-center items-center container min-h-screen"
+        >
+          <div className="flex flex-col gap-8">
+            <Heading title="Témoignages" isCentered />
+            <h4 className="text-center">
+              « Nous considérons nos clients comme des invités, à une fête où
+              nous sommes les hôtes »
+            </h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
+            </div>
           </div>
         </section>
         {/* Testimonials section */}
         {/* Process section */}
-        <section id="process" className="flex flex-col gap-8">
-          <Heading title="COMMENT ÇA MARCHE" isCentered />
-          <h4 className="text-center">
-            « Ensemble pour trouver la meilleur solution avec le meilleur prix »
-          </h4>
-          <Process />
+        <section
+          id="process"
+          className="flex justify-center items-center min-h-screen"
+        >
+          <div className="flex flex-col gap-8">
+            <Heading title="COMMENT ÇA MARCHE" isCentered />
+            <h4 className="text-center">
+              « Ensemble pour trouver la meilleur solution avec le meilleur prix
+              »
+            </h4>
+            <Process />
+          </div>
         </section>
         {/** End Process section */}
 
         {/* Contact section */}
-        <section id="contact">
-          <div className="bg-slate-800 rounded-lg px-8 lg:px-24 py-8 lg:py-12 flex flex-col lg:flex-row justify-between items-center gap-6">
+        <section
+          id="contact"
+          className="container min-h-screen flex justify-center items-center"
+        >
+          <div className="bg-slate-800 rounded-lg px-8 lg:px-24 py-8 lg:py-12 flex flex-col lg:items-start items-center gap-6">
             <div className="flex flex-col gap-4 text-center lg:text-start">
               <Heading title="Essayons notre service maintenant!" />
               <p className="max-w-[35rem] leading-normal text-lg">

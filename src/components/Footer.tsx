@@ -58,7 +58,7 @@ const Footer = () => {
       {/* Links */}
       {/** contact */}
       <div className="flex justify-center items-center">
-        <div className="grid grid-flow-col grid-cols-3 justify-between gap-10 p-10 bg-slate-800">
+        <div className="grid lg:grid-flow-col lg:grid-cols-3 grid-flow-row grid-cols-1 justify-between gap-10 p-10 bg-slate-800">
           <div className="icon-contact">
             <Mail size={30} color="white" />
             <span className="Footer-contact">contact@BenVitrage.ma</span>

@@ -12,10 +12,16 @@ const Navbar = () => {
         <Logo />
         {/* desktop navigation */}
         <nav className="hidden md:flex items-center gap-4 capitalize">
+          <Link
+            href={`/`}
+            className="text-[15px] first-letter:text-sky-500 uppercase border-b-2 border-sky-400  text-slate-200"
+          >
+            ACCUEIL
+          </Link>
           {navLinks.map((link, index) => (
             <Link
               key={index}
-              href={`#${link}`}
+              href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
               className="text-[15px] first-letter:text-sky-500 uppercase hover:border-b-2 border-sky-400  text-slate-200"
             >
               {link}

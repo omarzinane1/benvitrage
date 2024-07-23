@@ -216,7 +216,7 @@ export default function Home() {
         {/* Process section */}
         <section
           id="process"
-          className="flex justify-center items-center min-h-screen"
+          className="flex justify-center items-center min-h-screen container"
         >
           <div className="flex flex-col gap-8">
             <Heading title="COMMENT ÇA MARCHE" isCentered />

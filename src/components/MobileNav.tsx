@@ -21,7 +21,7 @@ const MobileNav = () => {
         {!isOpen ? <Menu /> : <X />}
       </div>
       <figure
-        className={`absolute rounded-md right-0 origin-top top-24 w-screen ${
+        className={`absolute rounded-md right-0 origin-top top-28 w-screen ${
           isOpen
             ? "translate-y-0 opacity-100 visible"
             : "-translate-y-5 opacity-0 invisible"

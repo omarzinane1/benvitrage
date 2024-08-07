@@ -77,7 +77,7 @@ export default function Home() {
           </div>
         </section>
         {/** Notre expertise Section */}
-        <section className="w-full h-screen gap-y-12 xl:gap-y-16 container lg:top-10 py-12 ">
+        <section className="w-full min-h-screen gap-y-12 xl:gap-y-16 container lg:top-10 py-12 ">
           <div className="relative h-96">
             <div className="xl:absolute xl:-z-50 grid grid-cols-1 w-full xl:grid-cols-2 gap-10">
               <div className="xl:absolute xl:right-56">
@@ -89,7 +89,7 @@ export default function Home() {
               </div>
               <Image src="/alum2.png" width={707} height={963} alt={"img"} />
             </div>
-            <div className="xl:absolute xl:-z-10 xl:right-0 xl:top-24 xl:w-[60%] grid grid-flow-row grid-rows-3 gap-0 p-4 lg:p-8 bg-slate-700">
+            <div className="xl:absolute xl:-z-10 xl:right-0 xl:top-24 md:w-[60%] grid grid-flow-row grid-rows-3 gap-0 p-4 lg:p-8 bg-slate-700">
               <PricingCard
                 title="Aluminium Menuiserie"
                 description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
@@ -123,7 +123,7 @@ export default function Home() {
         {/** End Notre expertise Section */}
 
         {/** Nos Services */}
-        <section className="flex justify-center items-center h-screen container py-12 ">
+        <section className="flex justify-center items-center h-screen container py-12">
           <div className="flex flex-col gap-10 w-full">
             <div className="flex flex-col justify-start items-start ">
               <div className="flex items-center gap-2">

@@ -18,6 +18,12 @@ const Navbar = () => {
           >
             ACCUEIL
           </Link>
+          <Link
+            href={`apropos`}
+            className="text-[15px] first-letter:text-sky-500 uppercase hover:border-b-2 hover:border-sky-400  text-slate-200"
+          >
+            QUI SOMMES-NOUS ?
+          </Link>
           {navLinks.map((link, index) => (
             <Link
               key={index}

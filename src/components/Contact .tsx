@@ -19,7 +19,8 @@ export default function Contact() {
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <h1 className="text-4xl font-bold text-white">Contactez-nous</h1>
           <div className="text-white mt-2">
-            <Link href={"/"}>Home</Link> <span className="mx-2">{">"}</span> <span>Contactez-nous</span>
+            <Link href={"/"}>Home</Link> <span className="mx-2">{">"}</span>{" "}
+            <span>Contactez-nous</span>
           </div>
         </div>
       </header>
@@ -61,10 +62,7 @@ export default function Contact() {
                 </div>
                 <div className="mb-4">
                   <label className="block text-white">Message</label>
-                  <textarea
-                    className="w-full p-3 border rounded-lg"
-                    
-                  ></textarea>
+                  <textarea className="w-full p-3 border rounded-lg"></textarea>
                 </div>
                 <button
                   type="submit"
@@ -107,6 +105,9 @@ export default function Contact() {
           </div>
         </div>
       </main>
+      <div className="w-full h-[70vh]">
+        <img src="/Map.png" alt="" />
+      </div>
     </div>
   );
 }

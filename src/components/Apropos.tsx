@@ -2,6 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Heading from "./Heading";
+import {
+  Award,
+  CheckSquare,
+  FileText,
+  RefreshCw,
+  Shield,
+  Smile,
+  Star,
+  ThumbsUp,
+} from "lucide-react";
 
 const Apropos = () => {
   return (
@@ -67,28 +77,28 @@ const Apropos = () => {
           <div className="bg-slate-600 w-full py-10 h-96">
             <div className="grid grid-flow-col justify-center items-center grid-cols-4 gap-4 w-full">
               <div className="flex flex-row justify-center items-center gap-4">
-                <i>88</i>{" "}
+                <Smile size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">+1000</h4>
                   <div className="text-2xl text-white">Clients Satisfaits</div>
                 </div>
               </div>
               <div className="flex flex-row items-center gap-4">
-                <i>88</i>{" "}
+                <Shield size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">100%</h4>
                   <div className="text-2xl text-white">Garantie</div>
                 </div>
               </div>
               <div className="flex flex-row items-center gap-4">
-                <i>88</i>{" "}
+                <FileText size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">48h</h4>
                   <div className="text-2xl text-white">Etude et devis</div>
                 </div>
               </div>
               <div className="flex flex-row items-center gap-4">
-                <i>88</i>{" "}
+                <CheckSquare size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">+1100</h4>
                   <div className="text-2xl text-white">Projets Réalisés</div>
@@ -145,7 +155,7 @@ const Apropos = () => {
         </div>
         <div className="grid grid-flow-col h-screen grid-cols-5 w-full gap-3">
           <div className="flex flex-col justify-center items-center gap-4">
-            <i>88</i>
+            <Award size={40} color="#4CAF50" />
             <h1>Expérience</h1>
             <p className="text-center">
               Possédant 20 ans d’expérience, nous contribuons à l’enrichissement
@@ -154,7 +164,7 @@ const Apropos = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <i>88</i>
+            <RefreshCw size={40} color="#4CAF50" />
             <h1>Flexibilité</h1>
             <p className="text-center">
               Nous sommes ouverts au changement. Nous continuons à développer
@@ -163,7 +173,7 @@ const Apropos = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <i>88</i>
+            <Star size={40} color="#4CAF50" />
             <h1>Qualité</h1>
             <p className="text-center">
               Notre personnel hautement qualifiés met leur savoir-faire à votre
@@ -172,7 +182,7 @@ const Apropos = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <i>88</i>
+            <Shield size={40} color="#4CAF50" />
             <h1>Sécurité</h1>
             <p className="text-center">
               Nous veillons à préserver nos clients de tout danger. Nos experts
@@ -181,7 +191,7 @@ const Apropos = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
-            <i>88</i>
+            <ThumbsUp size={40} color="#4CAF50" />
             <h1>Réputation</h1>
             <p className="text-center">
               Depuis sa création en 2001, l’entreprise connaît une forte

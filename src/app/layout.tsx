@@ -21,7 +21,7 @@ export default function RootLayout({
         className={`${inter.className} font-SwmIcon bg-slate-900 text-slate-400 text-lg min-h-screen overflow-x-hidden`}
       >
         <Navbar />
-        {children}
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

@@ -31,7 +31,7 @@ const MobileNav = () => {
           {navLinks.map((link, index) => (
             <Link
               key={index}
-              href={`#${link}`}
+              href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
               className="py-1 px-2 transition-all rounded-md hover:bg-slate-700 hover:text-sky-400"
               onClick={toggleMenu}
             >

@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
 import { PhoneCall } from "lucide-react";
-import { link } from "fs";
 
 const images: any = {
   Porte: "/alum2.png",
@@ -174,20 +173,17 @@ const Produits = () => {
                 nous personnalisons vos portes ou fenêtres selon la hauteur et
                 la largeur de vos ouvertures.
               </p>
-              <div className="flex xl:flex-row flex-col gap-6">
-                <div style={{ display: "flex", alignItems: "center" }}>
+              <div className="flex lg:flex-row flex-col gap-6">
+                <div className="flex lg:flex-row flex-col items-center gap-4">
                   <div>
                     <img
                       src={images[selectedMenu]}
                       alt={selectedMenu}
-                      style={{ width: "1200px", height: "auto" }}
+                      className=" lg:w-[1200px] h-auto"
                     />
                   </div>
 
-                  <div
-                    style={{ marginLeft: "20px" }}
-                    className="flex flex-col justify-center items-start gap-3 w-full"
-                  >
+                  <div className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]">
                     {Object.keys(images).map((menu) => (
                       <div
                         key={menu}
@@ -199,8 +195,8 @@ const Produits = () => {
                             selectedMenu === menu ? "#2979FF" : "#4A5568",
                           color: "white",
                           cursor: "pointer",
-                          width: "300px",
                         }}
+                        className="lg:w-[300px] w-[368px] h-auto"
                       >
                         {menu}
                       </div>
@@ -229,11 +225,7 @@ const Produits = () => {
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
                   <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      flexDirection: "row-reverse",
-                    }}
+                    className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4"
                   >
                     <div>
                       <img
@@ -255,8 +247,8 @@ const Produits = () => {
                               selectedMenu2 === menu2 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            width: "300px",
                           }}
+                          className="lg:w-[300px] w-[368px] h-auto"
                         >
                           {menu2}
                           <p>{Ouvrages[menu2].paragraphe}</p>
@@ -284,10 +276,7 @@ const Produits = () => {
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
                   <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
+                    className="flex lg:flex-row flex-col items-center gap-4"
                   >
                     <div>
                       <img
@@ -298,8 +287,7 @@ const Produits = () => {
                     </div>
 
                     <div
-                      style={{ marginLeft: "20px" }}
-                      className="flex flex-col justify-center items-start gap-3 w-full"
+                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
                     >
                       {Object.keys(Traitements).map((menu3) => (
                         <div
@@ -312,8 +300,8 @@ const Produits = () => {
                               selectedMenu3 === menu3 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            width: "300px",
                           }}
+                          className="lg:w-[300px] w-[368px] h-auto"
                         >
                           {menu3}
                           <p>{Traitements[menu3].paragraphe}</p>
@@ -344,10 +332,7 @@ const Produits = () => {
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
                   <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
+                    className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4"
                   >
                     <div>
                       <img
@@ -358,8 +343,7 @@ const Produits = () => {
                     </div>
 
                     <div
-                      style={{ marginLeft: "20px" }}
-                      className="flex flex-col justify-center items-start gap-3 w-full"
+                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
                     >
                       {Object.keys(Amenagements).map((menu4) => (
                         <div
@@ -372,8 +356,9 @@ const Produits = () => {
                               selectedMenu4 === menu4 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            width: "300px",
+                            
                           }}
+                          className="lg:w-[300px] w-[368px] h-auto"
                         >
                           {menu4}
                           <p>{Amenagements[menu4].paragraphe}</p>
@@ -394,16 +379,13 @@ const Produits = () => {
                   suivant une variété de designs. Nous vous proposons des
                   modèles permettant une adaptation facile aux différentes
                   configurations et à tous vos besoins. Nos professionnels
-                  chevronnés, dotés d'une expérience riche dans le domaine, sont
-                  les mieux placés pour vous conseiller et guider votre choix
-                  des matériaux et des options techniques.
+                  chevronnés, dotés d{"'"}une expérience riche dans le domaine,
+                  sont les mieux placés pour vous conseiller et guider votre
+                  choix des matériaux et des options techniques.
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
                   <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
+                    className="flex lg:flex-row flex-col items-center gap-4"
                   >
                     <div>
                       <img
@@ -414,8 +396,7 @@ const Produits = () => {
                     </div>
 
                     <div
-                      style={{ marginLeft: "20px" }}
-                      className="flex flex-col justify-center items-start gap-3 w-full"
+                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
                     >
                       {Object.keys(AutreSolutions).map((menu5) => (
                         <div
@@ -428,8 +409,9 @@ const Produits = () => {
                               selectedMenu5 === menu5 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            width: "300px",
+                            
                           }}
+                          className="lg:w-[300px] w-[368px] h-auto"
                         >
                           {menu5}
                           <p>{AutreSolutions[menu5].paragraphe}</p>

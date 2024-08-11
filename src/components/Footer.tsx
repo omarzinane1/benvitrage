@@ -14,7 +14,7 @@ const Footer = () => {
     <Youtube key="y" className="social-link" />,
   ];
   return (
-    <footer className="flex flex-col gap-4 pb-4">
+    <footer className="flex flex-col gap-4 pt-10">
       {/* Links */}
       <div className="container mb-12 flex flex-col lg:flex-row">
         <div className="basis-1/3 flex flex-col md:items-center lg:items-start gap-4 lg:gap-6">

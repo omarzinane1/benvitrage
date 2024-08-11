@@ -35,8 +35,8 @@ const Apropos = () => {
         </div>
       </header>
       <main className="container mx-auto p-6">
-        <div className="flex flex-row justify-between w-full h-screen">
-          <div className="flex flex-col gap-3 w-1/2">
+        <div className="flex lg:flex-row flex-col justify-between w-full h-screen">
+          <div className="flex flex-col gap-3 lg:w-1/2">
             <div>
               <div className="flex items-center gap-2">
                 <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
@@ -68,36 +68,36 @@ const Apropos = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="lg:flex flex-col gap-4 lg:visible hidden">
             <Image src="/alum2.png" alt="Image 1" width={500} height={500} />
             <Image src="/alum2.png" alt="Image 2" width={500} height={500} />
           </div>
         </div>
-        <div className="relative flex items-start h-screen">
-          <div className="bg-slate-600 w-full py-10 h-96">
-            <div className="grid grid-flow-col justify-center items-center grid-cols-4 gap-4 w-full">
-              <div className="flex flex-row justify-center items-center gap-4">
+        <div className="lg:relative flex items-start h-screen">
+          <div className="lg:bg-slate-600 w-full py-10 h-96">
+            <div className="grid lg:grid-flow-col justify-center items-center lg:grid-cols-4 grid-cols-1 gap-4 w-full">
+              <div className="flex lg:flex-row flex-col justify-center items-center gap-4">
                 <Smile size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">+1000</h4>
                   <div className="text-2xl text-white">Clients Satisfaits</div>
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-4">
+              <div className="flex lg:flex-row flex-col justify-center items-center gap-4">
                 <Shield size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">100%</h4>
                   <div className="text-2xl text-white">Garantie</div>
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-4">
+              <div className="flex lg:flex-row flex-col justify-center items-center gap-4">
                 <FileText size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">48h</h4>
                   <div className="text-2xl text-white">Etude et devis</div>
                 </div>
               </div>
-              <div className="flex flex-row items-center gap-4">
+              <div className="flex lg:flex-row flex-col justify-center3 items-center gap-4">
                 <CheckSquare size={40} color="#4CAF50" />{" "}
                 <div className="text-center">
                   <h4 className="font-bold text-white text-4xl">+1100</h4>
@@ -105,8 +105,8 @@ const Apropos = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute flex flex-row justify-between gap-5 w-[80%] p-6 bg-stone-50 left-28 top-52">
-              <div className="flex flex-col gap-4 w-1/2">
+            <div className="lg:absolute flex lg:flex-row lg:mt-0 mt-12 flex-col justify-between gap-5 lg:w-[80%] p-6 bg-stone-50 lg:left-28 lg:top-52">
+              <div className="flex flex-col gap-4 lg:w-1/2">
                 <div>
                   <div className="flex items-center gap-2">
                     <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
@@ -134,7 +134,7 @@ const Apropos = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row justify-between items-center h-[50vh] p-6">
+        <div className=" flex lg:flex-row flex-col lg:mt-0 mt-72 justify-between lg:items-center items-start gap-4 p-6">
           <div>
             <div className="flex items-center gap-2">
               <div className="bg-gray-400 p-1 w-2 h-2 rounded-full"></div>
@@ -142,7 +142,7 @@ const Apropos = () => {
             </div>
             <Heading title="Notre raison d'être." />
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <p>
               Chez ALUSA, nous développons des solutions qui atteignent des
               performances optimales à l’aide de nos produits de haute qualité.
@@ -153,7 +153,7 @@ const Apropos = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-flow-col h-screen grid-cols-5 w-full gap-3">
+        <div className="grid lg:grid-flow-col lg:h-screen lg:grid-cols-5 grid-cols-1 w-full gap-3">
           <div className="flex flex-col justify-center items-center gap-4">
             <Award size={40} color="#4CAF50" />
             <h1>Expérience</h1>

@@ -16,7 +16,7 @@ const PricingCard: FC<PricingCardProps> = ({
   return (
     <>
       <div className="flex flex-row gap-3">
-        <div className={`bg-${color} p-10 text-white rounded-full flex items-center justify-center w-20 h-20`}>{number}</div>
+        <div className={`${color} p-10 text-white rounded-full flex items-center justify-center w-20 h-20`}>{number}</div>
         <div className="flex flex-col gap-2">
           <h1 className="text-white">{title}</h1>
           <p className="text-[15px]">{description}</p>

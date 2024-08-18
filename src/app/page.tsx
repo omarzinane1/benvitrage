@@ -217,7 +217,7 @@ export default function Home() {
               title="Aluminium Menuiserie"
               description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
               number="01"
-              color="red-600"
+              color="bg-red-600"
               monthlyPrice={0}
               annuallyPrice={0}
               features={[]}
@@ -225,8 +225,8 @@ export default function Home() {
             <PricingCard
               title="Aluminium Menuiserie"
               description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
-              number="01"
-              color="amber-500"
+              number="02"
+              color="bg-amber-500"
               monthlyPrice={0}
               annuallyPrice={0}
               features={[]}
@@ -234,8 +234,8 @@ export default function Home() {
             <PricingCard
               title="Aluminium Menuiserie"
               description="Un savoir d’exception, des produits uniques et réalisés avec détermination. Alliant un savoir-faire exceptionnel aux technologies actuelles."
-              number="01"
-              color="sky-500"
+              number="03"
+              color="bg-sky-500"
               monthlyPrice={0}
               annuallyPrice={0}
               features={[]}

@@ -20,9 +20,8 @@ const Footer = () => {
         <div className="basis-1/3 flex flex-col md:items-center lg:items-start gap-4 lg:gap-6">
           <Logo />
           <p className="text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem id vero
-            ipsum iste qui minus quidem soluta omnis facere accusantium neque
-            explicabo saepe aut, fugiat asperiores molestias beatae non dolorem?
+            Implantée à Casablanca, capitale du Est marocain, Benvitrage est une société
+            spécialisée dans la fabrication Aluminium destiné aux particuliers et aux professionnels.
           </p>
           <ul className="flex items-center gap-4 lg:gap-6 mb-6 lg:mb-0">
             {socialLinks.map((link, index) => (
@@ -69,7 +68,9 @@ const Footer = () => {
           </div>
           <div className="icon-contact">
             <MapPin size={30} color="white" />
-            <span className="Footer-contact">63, Av Ahmed El Mansour Eddahbi</span>
+            <span className="Footer-contact">
+              63, Av Ahmed El Mansour Eddahbi
+            </span>
           </div>
         </div>
       </div>

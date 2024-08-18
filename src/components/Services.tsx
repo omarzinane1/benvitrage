@@ -28,7 +28,7 @@ const Services = () => {
         <div className="py-10 flex xl:flex-row flex-col w-full justify-between xl:items-start gap-20">
           <div className=" flex flex-col gap-6 xl:w-[70%]">
             <p>
-              Découvrez l’ensemble des services qu’ALUSA propose afin de vous
+              Découvrez l’ensemble des services qu’Benvitrage propose afin de vous
               satisfaire pleinement.
             </p>
             <div className="flex flex-col justify-start gap-6">

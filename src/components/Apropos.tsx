@@ -46,7 +46,7 @@ const Apropos = () => {
             </div>
             <div className="flex flex-col gap-5">
               <p>
-                ALUSA est une entreprise marocaine pionnière qui a su développer
+                Benvitrage est une entreprise marocaine pionnière qui a su développer
                 un savoir-faire imbattable dans le domaine de la menuiserie
                 Aluminium. En effet, la satisfaction et le confort de nos
                 clients sont primordiaux. Nous fabriquons, par excellence, un
@@ -60,10 +60,10 @@ const Apropos = () => {
               <p>
                 L’esthétique, la performance et la durabilité sont les critères
                 pris en considération pour le bénéfice du client et sa
-                satisfaction totale. ALUSA s’efforce de joindre la meilleure
+                satisfaction totale. Benvitrage s’efforce de joindre la meilleure
                 qualité avec l’innovation tout en respectant les règles de
                 l’environnement. La confiance et la fidélité des clients, ainsi
-                que les moyens humains et techniques dont ALUSA dispose, lui
+                que les moyens humains et techniques dont Benvitrage dispose, lui
                 permettent de pénétrer le marché national.
               </p>
             </div>
@@ -144,7 +144,7 @@ const Apropos = () => {
           </div>
           <div className="lg:w-1/2">
             <p>
-              Chez ALUSA, nous développons des solutions qui atteignent des
+              Chez Benvitrage, nous développons des solutions qui atteignent des
               performances optimales à l’aide de nos produits de haute qualité.
               Nous offrons des gammes de produits diversifiées et sur mesure
               selon les besoins et exigences de nos clients. Notre engagement,

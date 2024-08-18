@@ -360,10 +360,10 @@ export default function Home() {
           <div className="flex flex-col gap-4 text-center lg:text-start">
             <Heading title="Essayons notre service maintenant!" />
             <p className="max-w-[35rem] leading-normal text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae possimus dicta dolor recusandae. Eaque vel labore
-              iusto asperiores. Qui soluta dolore sint accusamus pariatur
-              incidunt, illum officia ab voluptatem cum?
+              Nous offrons des gammes de produits diversifiées et sur mesure
+              selon les besoins et exigences de nos clients. Notre engagement,
+              professionnalisme et persévérance sont des facteurs fondamentaux
+              dans le travail quotidien de notre équipe.
             </p>
           </div>
           <Button>

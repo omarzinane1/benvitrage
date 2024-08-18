@@ -218,15 +218,13 @@ const Produits = () => {
                   pour vous.
                 </p>
                 <p>
-                  Alusa offre des ouvrages blindés et dotés de systèmes de
+                  Benvitrage offre des ouvrages blindés et dotés de systèmes de
                   verrouillage, avec une impossibilité d’accès grâce à des
                   propriétés de résistance aux chocs et à toute tentative
                   d’effraction.
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
-                  <div
-                    className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4"
-                  >
+                  <div className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4">
                     <div>
                       <img
                         src={Ouvrages[selectedMenu2].image}
@@ -265,19 +263,17 @@ const Produits = () => {
                   Traitement de façade
                 </h1>
                 <p>
-                  Alusa est spécialisé dans l’habillage façade en aluminium,
-                  alliant à la fois la qualité, l’esthétisme et l’unicité du
-                  produit final. Nos prestations sont adaptables à tout type de
-                  besoins, que ce soit pour une construction de nouveaux
-                  bâtiments ou une reconfiguration des structures existantes.
-                  Nos façades se caractérisent par leur forte résistance aux
-                  intempéries, au rayonnement UV et aux changements de
-                  températures.
+                  Benvitrage est spécialisé dans l’habillage façade en
+                  aluminium, alliant à la fois la qualité, l’esthétisme et
+                  l’unicité du produit final. Nos prestations sont adaptables à
+                  tout type de besoins, que ce soit pour une construction de
+                  nouveaux bâtiments ou une reconfiguration des structures
+                  existantes. Nos façades se caractérisent par leur forte
+                  résistance aux intempéries, au rayonnement UV et aux
+                  changements de températures.
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
-                  <div
-                    className="flex lg:flex-row flex-col items-center gap-4"
-                  >
+                  <div className="flex lg:flex-row flex-col items-center gap-4">
                     <div>
                       <img
                         src={Traitements[selectedMenu3].image}
@@ -286,9 +282,7 @@ const Produits = () => {
                       />
                     </div>
 
-                    <div
-                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
-                    >
+                    <div className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]">
                       {Object.keys(Traitements).map((menu3) => (
                         <div
                           key={menu3}
@@ -320,9 +314,9 @@ const Produits = () => {
                 <p>
                   Nous accordons une attention toute particulière aux choix et à
                   la qualité des finitions. Le projet de votre aménagement
-                  devient le nôtre, l’équipe Alusa apporte tout son savoir-faire
-                  nécessaire à sa bonne réalisation en respectant vos délais et
-                  exigences.
+                  devient le nôtre, l’équipe Benvitrage apporte tout son
+                  savoir-faire nécessaire à sa bonne réalisation en respectant
+                  vos délais et exigences.
                 </p>
                 <p>
                   Nous prenons en charge la rénovation et la décoration de votre
@@ -331,9 +325,7 @@ const Produits = () => {
                   décoration ludique et impressionnante.
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
-                  <div
-                    className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4"
-                  >
+                  <div className="flex lg:flex-row lg:flex-row-reverse flex-col items-center gap-4">
                     <div>
                       <img
                         src={Amenagements[selectedMenu4].image}
@@ -342,9 +334,7 @@ const Produits = () => {
                       />
                     </div>
 
-                    <div
-                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
-                    >
+                    <div className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]">
                       {Object.keys(Amenagements).map((menu4) => (
                         <div
                           key={menu4}
@@ -356,7 +346,6 @@ const Produits = () => {
                               selectedMenu4 === menu4 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            
                           }}
                           className="lg:w-[300px] w-[368px] h-auto"
                         >
@@ -384,9 +373,7 @@ const Produits = () => {
                   choix des matériaux et des options techniques.
                 </p>
                 <div className="flex xl:flex-row flex-col gap-6">
-                  <div
-                    className="flex lg:flex-row flex-col items-center gap-4"
-                  >
+                  <div className="flex lg:flex-row flex-col items-center gap-4">
                     <div>
                       <img
                         src={AutreSolutions[selectedMenu5].image}
@@ -395,9 +382,7 @@ const Produits = () => {
                       />
                     </div>
 
-                    <div
-                      className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]"
-                    >
+                    <div className="flex flex-col justify-center items-start gap-3 w-full lg:ml-[20px]">
                       {Object.keys(AutreSolutions).map((menu5) => (
                         <div
                           key={menu5}
@@ -409,7 +394,6 @@ const Produits = () => {
                               selectedMenu5 === menu5 ? "#2979FF" : "#4A5568",
                             color: "white",
                             cursor: "pointer",
-                            
                           }}
                           className="lg:w-[300px] w-[368px] h-auto"
                         >
@@ -465,9 +449,9 @@ const Produits = () => {
             <div className="flex flex-col justify-center items-start gap-8 p-10 w-80 bg-slate-700">
               <h1 className="text-white text-xl font-bold">A propos de nous</h1>
               <p className="text-white">
-                Implantée à Agadir, capitale du sud marocain, ALUSA est une
-                société spécialisée dans la fabrication et la vente de la
-                menuiserie Aluminium destiné aux particuliers et aux
+                Implantée à Casablanca, capitale du Est
+                marocain, BENVITRAGE est une société spécialisée dans la
+                fabrication Aluminium destiné aux particuliers et aux
                 professionnels.
               </p>
               <Link

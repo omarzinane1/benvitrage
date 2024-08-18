@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
 interface CardProps {
-  frontContent: string;
-  backContent: string;
+  frontContent: any;
+  backContent: any;
 }
 
 const Card: FC<CardProps> = ({ frontContent, backContent }) => {

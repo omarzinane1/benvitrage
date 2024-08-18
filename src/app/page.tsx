@@ -14,6 +14,127 @@ import Link from "next/link";
 
 export default function Home() {
   const images = ["/alum2.png", "/bg2.png", "/alum3.png"];
+  /**
+   * backend contant
+   */
+  const backend1 = (
+    <div className="flex flex-col justify-start items-start gap-4 p-6 pt-10">
+      <span>O Porte</span>
+      <span>O Fenêtre coulissante</span>
+      <span>O Porte fenêtres coulissante</span>
+      <span>O Châssis à frappe</span>
+      <Link
+        href={"/produits"}
+        className="text-center p-3 bg-sky-600 border-4 border-dashed border-blue-500 hover:bg-sky-400"
+      >
+        En savoir plus
+      </Link>
+    </div>
+  );
+  const backend2 = (
+    <div className="flex flex-col justify-start items-start gap-4 p-6 pt-10">
+      <span>O Volet roulant</span>
+      <span>O Garde-corps en verre</span>
+      <span>O trempé ou feuilleté</span>
+      <span>O Portail</span>
+      <Link
+        href={"/produits"}
+        className="text-center p-3 bg-sky-600 border-4 border-dashed border-blue-500 hover:bg-sky-400"
+      >
+        En savoir plus
+      </Link>
+    </div>
+  );
+  const backend3 = (
+    <div className="flex flex-col justify-start items-start gap-4 p-6 pt-10">
+      <span>O Mur Rideau</span>
+      <span>O Habillage de façade en</span>
+      <span>tôle en aluminium</span>
+      <span>O Brise soleil</span>
+      <Link
+        href={"/produits"}
+        className="text-center p-3 bg-sky-600 border-4 border-dashed border-blue-500 hover:bg-sky-400"
+      >
+        En savoir plus
+      </Link>
+    </div>
+  );
+  const backend4 = (
+    <div className="flex flex-col justify-start items-start gap-4 p-6 pt-10">
+      <span>O Cloison amovible</span>
+      <span>O Système accordéon en Verre</span>
+      <span>O Pergola Bioclimatique</span>
+      <span>O Store</span>
+      <span>O Tôle avec motif en découpe</span>
+      <span>Lazer</span>
+      <Link
+        href={"/produits"}
+        className="text-center p-3 bg-sky-600 border-4 border-dashed border-blue-500 hover:bg-sky-400"
+      >
+        En savoir plus
+      </Link>
+    </div>
+  );
+  /**
+   * frontEnd contant
+   */
+  const front1 = (
+    <div className="relative rounded-lg h-full overflow-hidden shadow-lg">
+      <Image
+        src="/alum2.png"
+        alt="fornt1"
+        width={500}
+        height={500}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white p-4">
+        <h3 className="text-center">Ouverture</h3>
+      </div>
+    </div>
+  );
+  const front2 = (
+    <div className="relative rounded-lg h-full overflow-hidden shadow-lg">
+      <Image
+        src="/alum2.png"
+        alt="fornt1"
+        width={500}
+        height={500}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white p-4">
+        <h3 className="text-center">Ouvrage de protection</h3>
+      </div>
+    </div>
+  );
+  const front3 = (
+    <div className="relative rounded-lg h-full overflow-hidden shadow-lg">
+      <Image
+        src="/alum2.png"
+        alt="fornt1"
+        width={500}
+        height={500}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white p-4">
+        <h3 className="text-center">Traitement de façade</h3>
+      </div>
+    </div>
+  );
+  const front4 = (
+    <div className="relative rounded-lg h-full overflow-hidden shadow-lg">
+      <Image
+        src="/alum2.png"
+        alt="fornt1"
+        width={500}
+        height={500}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-white p-4">
+        <h3 className="text-center">Aménagement et décoration</h3>
+      </div>
+    </div>
+  );
+
   return (
     <div className="overflow-x-hidden antialiased">
       {/* Home section */}
@@ -73,10 +194,10 @@ export default function Home() {
             <Heading title="Découvrez nos produits en un clic !" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-            <Card frontContent="Front 1" backContent="Back 1" />
-            <Card frontContent="Front 2" backContent="Back 2" />
-            <Card frontContent="Front 3" backContent="Back 3" />
-            <Card frontContent="Front 4" backContent="Back 4" />
+            <Card frontContent={front1} backContent={backend1} />
+            <Card frontContent={front2} backContent={backend2} />
+            <Card frontContent={front3} backContent={backend3} />
+            <Card frontContent={front4} backContent={backend4} />
           </div>
         </div>
       </section>

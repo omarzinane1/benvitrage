@@ -65,8 +65,6 @@ export default function Home() {
       <span>O Système accordéon en Verre</span>
       <span>O Pergola Bioclimatique</span>
       <span>O Store</span>
-      <span>O Tôle avec motif en découpe</span>
-      <span>Lazer</span>
       <Link
         href={"/produits"}
         className="text-center p-3 bg-sky-600 border-4 border-dashed border-blue-500 hover:bg-sky-400"

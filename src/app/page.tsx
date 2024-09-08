@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import FloatingButtons from "@/components/FloatingButtons";
 import Heading from "@/components/Heading";
 import MovingBorderButton from "@/components/MovingBorderDemo";
 import { StickyScrollRevealDemo } from "@/components/NosServices";
@@ -377,6 +378,7 @@ export default function Home() {
       </section>
 
       {/* Contact section */}
+      <FloatingButtons />
     </div>
   );
 }

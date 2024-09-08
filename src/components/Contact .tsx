@@ -1,9 +1,66 @@
+"use client"
 import React from "react";
 import { Facebook, Youtube, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, FormEvent } from "react";
+
+interface FormState {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 export default function Contact() {
+  const [form, setForm] = useState<FormState>({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setStatus(`Error: ${result.message}`);
+      }
+    } catch (error) {
+      setStatus("An unexpected error occurred.");
+    }
+  };
+
   return (
     <div className=" min-h-screen">
       <header className="relative w-full h-64">
@@ -29,12 +86,16 @@ export default function Contact() {
           <div className="w-full lg:w-1/2 px-3">
             <div className="bg-slate-800 p-6 rounded-lg shadow-lg">
               <h2 className="text-2xl font-bold mb-4">Restons en contact</h2>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="mb-4">
                     <label className="block text-white">Nom complet</label>
                     <input
                       type="text"
+                      id="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
                       className="w-full p-3 border rounded-lg"
                     />
                   </div>
@@ -42,6 +103,10 @@ export default function Contact() {
                     <label className="block text-white">E-mail</label>
                     <input
                       type="email"
+                      id="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
                       className="w-full p-3 border rounded-lg"
                     />
                   </div>
@@ -49,6 +114,10 @@ export default function Contact() {
                     <label className="block text-white">Téléphone</label>
                     <input
                       type="tel"
+                      id="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      required
                       className="w-full p-3 border rounded-lg"
                     />
                   </div>
@@ -62,7 +131,13 @@ export default function Contact() {
                 </div>
                 <div className="mb-4">
                   <label className="block text-white">Message</label>
-                  <textarea className="w-full p-3 border rounded-lg"></textarea>
+                  <textarea
+                    className="w-full p-3 border rounded-lg"
+                    id="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
                 <button
                   type="submit"
@@ -70,6 +145,7 @@ export default function Contact() {
                 >
                   Envoyer Message
                 </button>
+                {status && <p className="mt-4">{status}</p>}
               </form>
             </div>
           </div>
@@ -105,7 +181,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
-      <div className="w-full h-[70vh]">
+      <div className="w-full lg:h-[70vh]">
         <img src="/Map.png" alt="" />
       </div>
     </div>
